@@ -2,59 +2,65 @@
 <html>
   <head>
     <style>
+      /* Styles for the entire page */
       body {
         font-family: Arial, sans-serif;
         background-color: white;
       }
+
+      /* Styles for the header section */
       header {
         background-color: #5E503F;
         color: #92977E; <!-- color of "Hengzhi Zhang"  -->
         padding: 20px;
         text-align: center;
       }
+
+      /* Styles for the main content section */
       main {
         padding: 20px;
       }
+
+      /* Styles for each section in the main content section */
       section {
         background-color: white;
         padding: 20px;
         box-shadow: 0 0 10px #ddd;
         margin-bottom: 20px;
       }
-      h1 {
-        font-weight: bold;
+
+      /* Styles for headings */
+      h1, h2 {
+        font-weight: normal;
         color: #EAE0D5;
       }
-      h2 {
-      font-weight: bold;
-      color = black;
 
-      }
+      /* Styles for paragraph text in sections */
       section p {
-        font-family: "sans-serif", sans-serif;
-        <!-- this is the font for my bio section, which is courier -->
+        font-family: "Courier", sans-serif;
       }
+
+      /* Styles for specific headings in sections */
       h1{
-        font-family: "sans-serif", sans-serif;
-        font-weight: bold
-        <!-- this is the font for my labels section, which is courier -->
-        }
+        font-family: "Courier", sans-serif;
+      }
       h2{
-        font-family: "sans-serif", sans-serif;
-        <!-- this is the font for my other labels section, which is courier -->
-        }
+        font-family: "Courier", sans-serif;
+      }
+
+      /* Styles for unordered lists in sections */
       section ul {
-        font-family: "sans-serif", sans-serif;
-        <!-- this is the font for my skills section, which is courier -->
-        }
+        font-family: "Courier", sans-serif;
+      }
+
+      /* Styles for the contact button */
       button{
         font-family: "sans-serif", sans-serif;
-        <!-- this is the font for my button, which is courier -->
-        font-size: 16px
-        <!-- specifies font size -->
-        }
-      button.contact {
+        font-size: 16px; /* specifies font size */
+      }
 
+      /* Styles for the contact button animation */
+      button.contact {
         animation: pulse 2s infinite;
         background-color: #4CAF50;
         border: none;
@@ -66,7 +72,9 @@
         font-size: 16px;
         border-radius: 8px;
       }
-    @keyframes pulse {
+
+      /* Keyframe animation for the contact button */
+      @keyframes pulse {
         0% {
           transform: scale(1);
         }
@@ -78,53 +86,54 @@
         }
       }
 
-
-
-
-
-
+      /* Styles for the header section container */
       .header {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-.name-container {
-  text-align: center;
-}
+      /* Styles for the name container within the header section */
+      .name-container {
+        text-align: center;
+      }
 
-.icons-container {
-  display: flex;
-  margin-left: 10px; /* add some space between icons */
-}
+      /* Styles for the icons container within the header section */
+      .icons-container {
+        display: flex;
+        margin-left: 10px; /* add some space between icons */
+      }
 
-.icon-link {
-  display: inline-block;
-  margin-left: 10px; /* add some space between icons */
-}
+      /* Styles for each icon link within the icons container */
+      .icon-link {
+        display: inline-block;
+        margin-left: 10px; /* add some space between icons */
+      }
 
-.icon {
-  width: 40px;
-  height: 40px;
-}
+      /* Styles for each icon within an icon link */
+      .icon {
+        width: 40px;
+        height: 40px;
+      }
+
+      /* Styles for the banner image within the header section */
       .banner {
         width: 100%;
-        height: 200px;  <!-- sets height to 200 pixels -->
+        height: 200px; /* sets height to 200 pixels */
       }
+
+      /* Styles for the section links within the main content section */
       .section-link {
         text-decoration: none;
         color: #333;
         display: block;
-        padding: 10px 0;
-        border-bottom: 1px solid #ddd;
-      }
+     }
       .section-link:hover {
         background-color: #ddd;
       }
       nav {
         background-color: #5E503F;
         color: #fff;
-        font-weight: bold;
         padding: 10px;
       }
 
@@ -149,10 +158,66 @@
         text-decoration: underline;
       }
 
-    .no-link-style {
+     .no-link-style {
         color: inherit;
         text-decoration: none;
         cursor: pointer;
+      }
+
+     .project {
+        margin-bottom: 20px;
+      }
+
+     .preview {
+        position: relative;
+        top: 20%;
+        left: 20%;
+        width: 736px;
+        height: 454px;
+        overflow: visible;
+        margin-bottom: 10px;
+      }
+
+      .preview img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: auto;
+        height: auto;
+        object-fit: contain;
+      }
+
+      .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: opacity 0.3s ease;
+      }
+
+      .overlay:hover {
+        opacity: 1;
+      }
+
+      .button {
+        color: #fff;
+        font-size: 16px;
+        padding: 10px 20px;
+        border: 2px solid #fff;
+        border-radius: 5px;
+        transition: all 0.3s ease;
+      }
+
+      .button:hover {
+        background-color: #fff;
+        color: #000;
       }
     </style>
   </head>
